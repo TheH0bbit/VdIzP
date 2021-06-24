@@ -11,6 +11,8 @@ public class PageSwiper : MonoBehaviour, IDragHandler, IEndDragHandler
     public int totalPages = 1;
     private int currentPage = 2;
 
+    public AudioSource audi;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +22,7 @@ public class PageSwiper : MonoBehaviour, IDragHandler, IEndDragHandler
     {
         float difference = (data.pressPosition.x - data.position.x) /20;
         transform.position = panelLocation - new Vector3(difference, 0, 0);
+        audi.Play();
     }
     public void OnEndDrag(PointerEventData data)
     {
