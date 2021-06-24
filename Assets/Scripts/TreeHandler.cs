@@ -8,13 +8,20 @@ public class TreeHandler : MonoBehaviour
     public Sprite[] spriteArray;
     public SpriteRenderer spriteRenderer;
 
-    public float stat1;
-    public float stat2;
+    [SerializeField] FloatVariable Stat1;
+    [SerializeField] FloatVariable Stat2;
+
+    public float Stat1Stored;
+    public float Stat2Stored;
+
+    [SerializeField] private CanvasGroup CG;
 
     // Start is called before the first frame update
     void Start()
     {
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        CG = GameObject.Find("StatsCanvas").GetComponent<CanvasGroup>();
+        CG.alpha = 0;
     }
 
     // Update is called once per frame
@@ -23,9 +30,20 @@ public class TreeHandler : MonoBehaviour
         
     }
 
-    private void OnMouseDown()
+    private void OnMouseEnter()
     {
-        
+        Stat1.SetValue(Stat1Stored);
+        Stat2.SetValue(Stat2Stored);
+        CG.alpha = 1;
+        CG.interactable = true;
+        CG.blocksRaycasts = true;
+    }
+
+    private void OnMouseExit()
+    {
+        CG.alpha = 0;
+        CG.interactable = false;
+        CG.blocksRaycasts = false;
     }
 
     void ChangeSprite(int sprite)

@@ -20,7 +20,7 @@ public class PageSwiper : MonoBehaviour, IDragHandler, IEndDragHandler
     }
     public void OnDrag(PointerEventData data)
     {
-        float difference = (data.pressPosition.x - data.position.x) /20;
+        float difference = (data.pressPosition.x - data.position.x) / 20;
         transform.position = panelLocation - new Vector3(difference, 0, 0);
         audi.Play();
     }

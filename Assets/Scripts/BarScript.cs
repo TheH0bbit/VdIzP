@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class BarScript : MonoBehaviour
 {
-    public float fillAmount;
-
+    public FloatVariable fillAmount;
     public Image fillbar;
 
     // Start is called before the first frame update
@@ -18,7 +17,7 @@ public class BarScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        updateBar(fillAmount);
+        updateBar(fillAmount.GetValue());
     }
 
     void updateBar(float fillAmount)
