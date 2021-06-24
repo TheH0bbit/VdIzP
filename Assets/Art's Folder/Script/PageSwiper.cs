@@ -18,24 +18,24 @@ public class PageSwiper : MonoBehaviour, IDragHandler, IEndDragHandler
     }
     public void OnDrag(PointerEventData data)
     {
-        float difference = data.pressPosition.x - data.position.x;
+        float difference = (data.pressPosition.x - data.position.x) /20;
         transform.position = panelLocation - new Vector3(difference, 0, 0);
     }
     public void OnEndDrag(PointerEventData data)
     {
-        float percentage = (data.pressPosition.x - data.position.x) / Screen.width;
+        float percentage = (data.pressPosition.x - data.position.x) / 70;
         if (Mathf.Abs(percentage) >= percentThreshold)
         {
             Vector3 newLocation = panelLocation;
             if (percentage > 0 && currentPage < totalPages)
             {
                 currentPage++;
-                newLocation += new Vector3(-Screen.width, 0, 0);
+                newLocation += new Vector3(-70, 0, 0);
             }
             else if (percentage < 0 && currentPage > 1)
             {
                 currentPage--;
-                newLocation += new Vector3(Screen.width, 0, 0);
+                newLocation += new Vector3(70, 0, 0);
             }
             StartCoroutine(SmoothMove(transform.position, newLocation, easing));
             panelLocation = newLocation;
