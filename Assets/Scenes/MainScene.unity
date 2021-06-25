@@ -639,6 +639,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 847512374}
     m_Modifications:
+    - target: {fileID: -4721685998979045866, guid: 513b77fc8fdb1f54cbd88d3f1f20bfd9, type: 3}
+      propertyPath: Stat1Stored
+      value: 0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: -4721685998979045866, guid: 513b77fc8fdb1f54cbd88d3f1f20bfd9, type: 3}
+      propertyPath: Stat2Stored
+      value: 0.54
+      objectReference: {fileID: 0}
     - target: {fileID: 4840931045684913655, guid: 513b77fc8fdb1f54cbd88d3f1f20bfd9, type: 3}
       propertyPath: m_Name
       value: Tree
@@ -701,6 +709,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 847512374}
     m_Modifications:
+    - target: {fileID: -4721685998979045866, guid: 513b77fc8fdb1f54cbd88d3f1f20bfd9, type: 3}
+      propertyPath: Stat1Stored
+      value: 0.72
+      objectReference: {fileID: 0}
+    - target: {fileID: -4721685998979045866, guid: 513b77fc8fdb1f54cbd88d3f1f20bfd9, type: 3}
+      propertyPath: Stat2Stored
+      value: 0.54
+      objectReference: {fileID: 0}
     - target: {fileID: 4840931045684913655, guid: 513b77fc8fdb1f54cbd88d3f1f20bfd9, type: 3}
       propertyPath: m_Name
       value: Tree (2)
@@ -947,7 +963,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: d38ca5f30fc9ea14a83d4edde8ba7fc1, type: 2}
   m_audioClip: {fileID: 8300000, guid: dae20406944c57044a00569695e90df3, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.142
+  m_Volume: 0.118
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1780,6 +1796,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 847512374}
     m_Modifications:
+    - target: {fileID: -4721685998979045866, guid: 513b77fc8fdb1f54cbd88d3f1f20bfd9, type: 3}
+      propertyPath: Stat1Stored
+      value: 0.73
+      objectReference: {fileID: 0}
+    - target: {fileID: -4721685998979045866, guid: 513b77fc8fdb1f54cbd88d3f1f20bfd9, type: 3}
+      propertyPath: Stat2Stored
+      value: 0.45
+      objectReference: {fileID: 0}
     - target: {fileID: 4840931045684913655, guid: 513b77fc8fdb1f54cbd88d3f1f20bfd9, type: 3}
       propertyPath: m_Name
       value: Tree (3)
@@ -1940,7 +1964,6 @@ RectTransform:
   - {fileID: 337729114}
   - {fileID: 1280665771}
   - {fileID: 268955336}
-  - {fileID: 1225863290}
   m_Father: {fileID: 1821122994}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -3, y: 1.001, z: -0.035}
@@ -2306,63 +2329,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3637311478573009403, guid: 18b6bb3de22b5415490ac581764fb182, type: 3}
   m_PrefabInstance: {fileID: 908143592}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &986293552
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 847512374}
-    m_Modifications:
-    - target: {fileID: 5253134229847101507, guid: dcabdfa395e846440b1ec039a91bd34e, type: 3}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5253134229847101507, guid: dcabdfa395e846440b1ec039a91bd34e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -15.593356
-      objectReference: {fileID: 0}
-    - target: {fileID: 5253134229847101507, guid: dcabdfa395e846440b1ec039a91bd34e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 7.9434533
-      objectReference: {fileID: 0}
-    - target: {fileID: 5253134229847101507, guid: dcabdfa395e846440b1ec039a91bd34e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.14399105
-      objectReference: {fileID: 0}
-    - target: {fileID: 5253134229847101507, guid: dcabdfa395e846440b1ec039a91bd34e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.99961925
-      objectReference: {fileID: 0}
-    - target: {fileID: 5253134229847101507, guid: dcabdfa395e846440b1ec039a91bd34e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.026177496
-      objectReference: {fileID: 0}
-    - target: {fileID: 5253134229847101507, guid: dcabdfa395e846440b1ec039a91bd34e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.008725692
-      objectReference: {fileID: 0}
-    - target: {fileID: 5253134229847101507, guid: dcabdfa395e846440b1ec039a91bd34e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.00007615872
-      objectReference: {fileID: 0}
-    - target: {fileID: 5253134229847101507, guid: dcabdfa395e846440b1ec039a91bd34e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5253134229847101507, guid: dcabdfa395e846440b1ec039a91bd34e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5253134229847101507, guid: dcabdfa395e846440b1ec039a91bd34e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5898149263678002929, guid: dcabdfa395e846440b1ec039a91bd34e, type: 3}
-      propertyPath: m_Name
-      value: FlowerCompleted
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: dcabdfa395e846440b1ec039a91bd34e, type: 3}
 --- !u!1 &1004270697
 GameObject:
   m_ObjectHideFlags: 0
@@ -2740,11 +2706,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &1225863290 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5253134229847101507, guid: dcabdfa395e846440b1ec039a91bd34e, type: 3}
-  m_PrefabInstance: {fileID: 986293552}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1245816245
 GameObject:
   m_ObjectHideFlags: 0
@@ -3090,6 +3051,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 847512374}
     m_Modifications:
+    - target: {fileID: -4721685998979045866, guid: 513b77fc8fdb1f54cbd88d3f1f20bfd9, type: 3}
+      propertyPath: Stat1Stored
+      value: 0.37
+      objectReference: {fileID: 0}
+    - target: {fileID: -4721685998979045866, guid: 513b77fc8fdb1f54cbd88d3f1f20bfd9, type: 3}
+      propertyPath: Stat2Stored
+      value: 0.94
+      objectReference: {fileID: 0}
     - target: {fileID: 4840931045684913655, guid: 513b77fc8fdb1f54cbd88d3f1f20bfd9, type: 3}
       propertyPath: m_Name
       value: Tree (1)
