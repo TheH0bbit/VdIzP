@@ -20,7 +20,7 @@ public class Tree : MonoBehaviour
 
 
     private void Start() {
-        if(firstTimeLoaded.GetValue() == true)
+        if(true)
         {
             for(int i = 0; i < FlowersBlue.Length; i++)
             {

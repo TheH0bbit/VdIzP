@@ -79,6 +79,6 @@ public class DayCounter : MonoBehaviour
         {
             brainPower.SetValue(brainPower.GetValue() + 1);
         }
-        SceneManager.LoadScene("Rechenspiel");
+        //SceneManager.LoadScene("Rechenspiel");
     }
 }
