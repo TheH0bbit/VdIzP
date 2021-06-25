@@ -1194,6 +1194,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 851583114}
     m_Modifications:
+    - target: {fileID: 3637311478573009397, guid: 68d0e55906a88486e98bc8792db3033a, type: 3}
+      propertyPath: firstTimeLoaded
+      value: 
+      objectReference: {fileID: 11400000, guid: cd7376c182c3f4697b7076b70d167215, type: 2}
     - target: {fileID: 3637311478573009402, guid: 68d0e55906a88486e98bc8792db3033a, type: 3}
       propertyPath: m_Name
       value: TreeStage1
@@ -2242,6 +2246,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 851583114}
     m_Modifications:
+    - target: {fileID: 3637311478573009397, guid: 18b6bb3de22b5415490ac581764fb182, type: 3}
+      propertyPath: firstTimeLoaded
+      value: 
+      objectReference: {fileID: 11400000, guid: cd7376c182c3f4697b7076b70d167215, type: 2}
     - target: {fileID: 3637311478573009402, guid: 18b6bb3de22b5415490ac581764fb182, type: 3}
       propertyPath: m_Name
       value: TreeStage6
@@ -2532,6 +2540,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 851583114}
     m_Modifications:
+    - target: {fileID: 3637311478573009397, guid: 7fefaddff2aee4194924b9caf6282de2, type: 3}
+      propertyPath: firstTimeLoaded
+      value: 
+      objectReference: {fileID: 11400000, guid: cd7376c182c3f4697b7076b70d167215, type: 2}
     - target: {fileID: 3637311478573009402, guid: 7fefaddff2aee4194924b9caf6282de2, type: 3}
       propertyPath: m_Name
       value: TreeStage4
@@ -2650,6 +2662,10 @@ PrefabInstance:
     - target: {fileID: 8733196902104207823, guid: 3dd2e00c0127a3546a841fdaf3839a6b, type: 3}
       propertyPath: m_Name
       value: FlowerInProgress
+      objectReference: {fileID: 0}
+    - target: {fileID: 8733196902104207823, guid: 3dd2e00c0127a3546a841fdaf3839a6b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dd2e00c0127a3546a841fdaf3839a6b, type: 3}
@@ -2885,6 +2901,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 851583114}
     m_Modifications:
+    - target: {fileID: 3637311478573009397, guid: 5db123d56777840c89cb73f0b08cf2cf, type: 3}
+      propertyPath: firstTimeLoaded
+      value: 
+      objectReference: {fileID: 11400000, guid: cd7376c182c3f4697b7076b70d167215, type: 2}
     - target: {fileID: 3637311478573009402, guid: 5db123d56777840c89cb73f0b08cf2cf, type: 3}
       propertyPath: m_Name
       value: TreeStage5
@@ -3506,6 +3526,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 851583114}
     m_Modifications:
+    - target: {fileID: 3637311478573009397, guid: 0a8da829f0b9f4615bfc4222837c26d7, type: 3}
+      propertyPath: firstTimeLoaded
+      value: 
+      objectReference: {fileID: 11400000, guid: cd7376c182c3f4697b7076b70d167215, type: 2}
     - target: {fileID: 3637311478573009402, guid: 0a8da829f0b9f4615bfc4222837c26d7, type: 3}
       propertyPath: m_Name
       value: TreeStage0
@@ -3727,6 +3751,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 851583114}
     m_Modifications:
+    - target: {fileID: 3637311478573009397, guid: 01a4f17469da540f6aebac30a9dcdbe5, type: 3}
+      propertyPath: firstTimeLoaded
+      value: 
+      objectReference: {fileID: 11400000, guid: cd7376c182c3f4697b7076b70d167215, type: 2}
     - target: {fileID: 3637311478573009402, guid: 01a4f17469da540f6aebac30a9dcdbe5, type: 3}
       propertyPath: m_Name
       value: TreeStage3
@@ -4133,6 +4161,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 851583114}
     m_Modifications:
+    - target: {fileID: 3637311478573009397, guid: d142dcc19f1bd4a6fb0d27c5428c96df, type: 3}
+      propertyPath: firstTimeLoaded
+      value: 
+      objectReference: {fileID: 11400000, guid: cd7376c182c3f4697b7076b70d167215, type: 2}
     - target: {fileID: 3637311478573009402, guid: d142dcc19f1bd4a6fb0d27c5428c96df, type: 3}
       propertyPath: m_Name
       value: TreeStage2

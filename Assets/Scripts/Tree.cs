@@ -16,21 +16,26 @@ public class Tree : MonoBehaviour
 
    [SerializeField] GameObject [] FlowersBlue;
    [SerializeField] GameObject [] FlowersRed;
+   [SerializeField] BooleanVariable firstTimeLoaded;
 
 
     private void Start() {
-        for(int i = 0; i < FlowersBlue.Length; i++)
+        if(firstTimeLoaded.GetValue() == true)
         {
+            for(int i = 0; i < FlowersBlue.Length; i++)
+            {
             FlowersBlue[i].GetComponent<SpriteRenderer>().enabled = false;
+            }
+            for(int i = 0; i < FlowersRed.Length; i++)
+            {
+                FlowersRed[i].GetComponent<SpriteRenderer>().enabled = false;
+            }
+            RechenStats.SetValue(0);
+            BrainPower.SetValue(0);
+            oldRechenStats = 0f;
+            oldBrainPower = 0f;
+            firstTimeLoaded.SetValue(false);
         }
-        for(int i = 0; i < FlowersRed.Length; i++)
-        {
-            FlowersRed[i].GetComponent<SpriteRenderer>().enabled = false;
-        }
-        RechenStats.SetValue(0);
-        BrainPower.SetValue(0);
-        oldRechenStats = 0f;
-        oldBrainPower = 0f;
     }
 
    private void Update() {
