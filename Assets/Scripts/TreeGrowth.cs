@@ -6,7 +6,7 @@ using System.Linq;
 public class TreeGrowth : MonoBehaviour
 {
     [SerializeField] IntVariable treeLevel;
-    [SerializeField] Sprite [] treeSprites;
+    [SerializeField] GameObject [] trees;
     private int lastLevel;
     private SpriteRenderer spriteRenderer;
 
@@ -19,7 +19,7 @@ public class TreeGrowth : MonoBehaviour
 
     void Update()
     {
-        if(treeLevel.GetValue() != lastLevel && treeSprites.Length == 8)
+        if(treeLevel.GetValue() != lastLevel && trees.Length == 8)
         {
             Debug.Log("Tree Level changed from " + lastLevel + " to " + treeLevel.GetValue() + ".");
             lastLevel = treeLevel.GetValue();
@@ -27,9 +27,13 @@ public class TreeGrowth : MonoBehaviour
             {
                 treeLevel.SetValue(0);
             }
-            if(treeLevel.GetValue() >= 0 && treeLevel.GetValue() < treeSprites.Length)
+            if(treeLevel.GetValue() >= 0 && treeLevel.GetValue() < trees.Length)
             {
-                spriteRenderer.sprite = treeSprites[treeLevel.GetValue()];
+                for(int i = 0; i < trees.Length; i++)
+                {
+                    trees[i].SetActive(false);
+                }
+                trees[treeLevel.GetValue()].SetActive(true);
             }
         }
     }

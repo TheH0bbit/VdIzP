@@ -10,6 +10,7 @@ public class DayCounter : MonoBehaviour
     private TextMeshProUGUI textMeshProUGUI;
 
     [SerializeField] BooleanVariable playedMinigame;
+    [SerializeField] FloatVariable brainPower;
     [SerializeField] IntVariable treeLevel;
 
     private int currentDay = 0;
@@ -27,6 +28,7 @@ public class DayCounter : MonoBehaviour
         {
             currentDay = 0;
             treeLevel.SetValue(0);
+            brainPower.SetValue(0);
             Debug.Log("Reached End of Week");
         } else
         {
@@ -72,5 +74,10 @@ public class DayCounter : MonoBehaviour
             playedMinigame.SetValue(true);
             treeLevel.SetValue(treeLevel.GetValue() + 1);
         }
+        else
+        {
+            brainPower.SetValue(brainPower.GetValue() + 1);
+        }
+        
     }
 }

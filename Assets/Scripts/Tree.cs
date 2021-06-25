@@ -42,12 +42,14 @@ public class Tree : MonoBehaviour
    }
 
     private void CheckStats(float oldStats, float newStats, int flowers, Stat statType) 
-    {
+    { 
         if (oldStats != newStats)
         {
-            if(newStats % flowerThreshhold > flowers)
+            Debug.Log("Changing Stats; New FlowerLevel: " + (int)(newStats - flowerThreshhold) + "; Current Flower Level: " + flowers + "; Current BrainPower: " + newStats);
+            if((int)(newStats - flowerThreshhold) > flowers)
+            Debug.Log("Spawing Flower");
             {
-                flowers = (int)(newStats % flowerThreshhold);
+                flowers = (int)(newStats - flowerThreshhold);
                 SpawnFlower(statType, flowers);
             }
         }
