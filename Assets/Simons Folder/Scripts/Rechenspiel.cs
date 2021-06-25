@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Random = System.Random;
 
@@ -9,32 +10,41 @@ public class Rechenspiel : MonoBehaviour
     Random r;
     string asStr;
     int solution;
+    int right;
     int count;
+    bool go = false;
     // Start is called before the first frame update
     void Start()
     {
         r = new Random();
+        right = 0;
         count = 0;
-        initQ();
-        this.gameObject.GetComponentInChildren<InputField>().Select();
+        StartCoroutine(countDown(3));
     }
 
     // Update is called once per frame
     void Update()
     {
-        GameObject.FindGameObjectWithTag("Score").GetComponent<Text>().text = count.ToString();
-        if (Input.GetKeyDown("space"))
+        if (go)
         {
-            nextQuestion();
+            GameObject.FindGameObjectWithTag("Score").GetComponent<Text>().text = (right.ToString() + " / " + count.ToString());
+            if (Input.GetKeyDown("space"))
+            {
+                count++;
+                nextQuestion();
+            }
+            if (count > 2)
+            {
+                SceneManager.LoadScene("Leonies Scene");
+            }
         }
-
     }
 
     void nextQuestion() {
         
         if(int.Parse( this.gameObject.GetComponentInChildren<InputField>().text) == solution)
         {
-            count++;
+            right++;
         }
         initQ();
         this.gameObject.GetComponentInChildren<InputField>().text = "";
@@ -59,5 +69,17 @@ public class Rechenspiel : MonoBehaviour
                 break;
         }
         GameObject.FindGameObjectWithTag("Problem").GetComponent<Text>().text = asStr;
+    }
+
+    IEnumerator countDown(int t) {
+        for(int i = t; i > 0; i--)
+        {
+            GameObject.FindGameObjectWithTag("Countdown").GetComponent<Text>().text = i.ToString();
+            yield return new WaitForSeconds(1);
+        }
+        GameObject.FindGameObjectWithTag("Countdown").GetComponent<Text>().text = "";
+        initQ();
+        this.gameObject.GetComponentInChildren<InputField>().Select();
+        go = true;
     }
 }
