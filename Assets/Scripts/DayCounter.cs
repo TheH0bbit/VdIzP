@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class DayCounter : MonoBehaviour
 {
@@ -78,6 +79,6 @@ public class DayCounter : MonoBehaviour
         {
             brainPower.SetValue(brainPower.GetValue() + 1);
         }
-        
+        SceneManager.LoadScene("Rechenspiel");
     }
 }

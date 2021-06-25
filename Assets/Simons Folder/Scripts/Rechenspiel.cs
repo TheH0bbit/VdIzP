@@ -35,7 +35,7 @@ public class Rechenspiel : MonoBehaviour
             }
             if (count > 2)
             {
-                SceneManager.LoadScene("Leonies Scene");
+                SceneManager.LoadScene("MainScene");
             }
         }
     }
