@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Art's Folder/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Rechenspiel.unity
+    guid: 9fdf4ce36313ca94f919ddfb5dafc773
+  - enabled: 1
+    path: Assets/Scenes/Leonies Scene.unity
+    guid: a7e7da20a76064be08fc5c0e22ec1c44
+  - enabled: 1
+    path: Assets/Scenes/MainScene.unity
+    guid: c94b6f328511340eb91c0268870fc936
   m_configObjects: {}
