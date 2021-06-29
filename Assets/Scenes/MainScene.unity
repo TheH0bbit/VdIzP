@@ -511,6 +511,7 @@ GameObject:
   - component: {fileID: 249843487}
   - component: {fileID: 249843486}
   - component: {fileID: 249843485}
+  - component: {fileID: 249843488}
   m_Layer: 0
   m_Name: DayButton
   m_TagString: Untagged
@@ -582,7 +583,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2132964485}
+      - m_Target: {fileID: 249843488}
         m_TargetAssemblyTypeName: DayCounter, Assembly-CSharp
         m_MethodName: NextDay
         m_Mode: 1
@@ -632,6 +633,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 249843483}
   m_CullTransparentMesh: 1
+--- !u!114 &249843488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 249843483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36e4441846cb74fe2b0c7a3bb89eb21b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textObject: {fileID: 1266882133}
+  playedMinigame: {fileID: 11400000, guid: 27da91ef8a77147b2be3782fe4053bba, type: 2}
+  brainPower: {fileID: 11400000, guid: e88b35f9b02284e77880b1bf704899bd, type: 2}
+  treeLevel: {fileID: 11400000, guid: d34a4de450ca443798dcde01c2f6d725, type: 2}
+  currentDay: {fileID: 11400000, guid: 0d898288fa8a44dc59e64dfd98dd1d1e, type: 2}
 --- !u!1001 &268955335
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2734,6 +2752,7 @@ GameObject:
   - component: {fileID: 1245816249}
   - component: {fileID: 1245816248}
   - component: {fileID: 1245816247}
+  - component: {fileID: 1245816250}
   m_Layer: 0
   m_Name: MinigameButton
   m_TagString: Untagged
@@ -2805,8 +2824,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2132964485}
-        m_TargetAssemblyTypeName: DayCounter, Assembly-CSharp
+      - m_Target: {fileID: 1245816250}
+        m_TargetAssemblyTypeName: PlayMinigame, Assembly-CSharp
         m_MethodName: DoMinigame
         m_Mode: 1
         m_Arguments:
@@ -2855,6 +2874,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1245816245}
   m_CullTransparentMesh: 1
+--- !u!114 &1245816250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245816245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df1ee133665b44c5193fa879d7bb9fd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playedMinigame: {fileID: 11400000, guid: 27da91ef8a77147b2be3782fe4053bba, type: 2}
+  treeLevel: {fileID: 11400000, guid: d34a4de450ca443798dcde01c2f6d725, type: 2}
+  brainPower: {fileID: 11400000, guid: e88b35f9b02284e77880b1bf704899bd, type: 2}
 --- !u!1001 &1248047394
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2964,7 +2998,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.4000034, y: -2.5}
+  m_AnchoredPosition: {x: 4.4000034, y: 0}
   m_SizeDelta: {x: 74.0085, y: 19.9891}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1266882135
@@ -3173,7 +3207,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.4, y: -1.8}
+  m_AnchoredPosition: {x: 4.4, y: 0}
   m_SizeDelta: {x: 74.0085, y: 19.9891}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1353606567
@@ -3229,7 +3263,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -4810,6 +4844,7 @@ MonoBehaviour:
   playedMinigame: {fileID: 11400000, guid: 27da91ef8a77147b2be3782fe4053bba, type: 2}
   brainPower: {fileID: 11400000, guid: e88b35f9b02284e77880b1bf704899bd, type: 2}
   treeLevel: {fileID: 11400000, guid: d34a4de450ca443798dcde01c2f6d725, type: 2}
+  currentDay: {fileID: 11400000, guid: 0d898288fa8a44dc59e64dfd98dd1d1e, type: 2}
 --- !u!4 &2132964486
 Transform:
   m_ObjectHideFlags: 0
