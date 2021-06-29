@@ -650,6 +650,21 @@ MonoBehaviour:
   brainPower: {fileID: 11400000, guid: e88b35f9b02284e77880b1bf704899bd, type: 2}
   treeLevel: {fileID: 11400000, guid: d34a4de450ca443798dcde01c2f6d725, type: 2}
   currentDay: {fileID: 11400000, guid: 0d898288fa8a44dc59e64dfd98dd1d1e, type: 2}
+  NewWeekEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: d1f12e0fa3e3a41719b7eea4a12505d1, type: 2}
+        m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &268955335
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2127,6 +2142,8 @@ GameObject:
   m_Component:
   - component: {fileID: 889427136}
   - component: {fileID: 889427137}
+  - component: {fileID: 889427139}
+  - component: {fileID: 889427138}
   m_Layer: 0
   m_Name: TreeTracker
   m_TagString: Untagged
@@ -2170,6 +2187,62 @@ MonoBehaviour:
   - {fileID: 1248047395}
   - {fileID: 908143593}
   - {fileID: 908143593}
+--- !u!114 &889427138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889427135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12df394406c28471580eb12ca4e96f4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 2faf286c722054e1da07ee2bfc673609, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 889427137}
+        m_TargetAssemblyTypeName: TreeGrowth, Assembly-CSharp
+        m_MethodName: GrowTree
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &889427139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889427135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12df394406c28471580eb12ca4e96f4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: d1f12e0fa3e3a41719b7eea4a12505d1, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 889427137}
+        m_TargetAssemblyTypeName: TreeGrowth, Assembly-CSharp
+        m_MethodName: StartNewWeek
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &890229579
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2889,6 +2962,21 @@ MonoBehaviour:
   playedMinigame: {fileID: 11400000, guid: 27da91ef8a77147b2be3782fe4053bba, type: 2}
   treeLevel: {fileID: 11400000, guid: d34a4de450ca443798dcde01c2f6d725, type: 2}
   brainPower: {fileID: 11400000, guid: e88b35f9b02284e77880b1bf704899bd, type: 2}
+  GrowTreeEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 2faf286c722054e1da07ee2bfc673609, type: 2}
+        m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1248047394
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3593,6 +3681,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3637311478573009403, guid: 0a8da829f0b9f4615bfc4222837c26d7, type: 3}
   m_PrefabInstance: {fileID: 1497240375}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1500848589
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1500848590}
+  m_Layer: 0
+  m_Name: Events
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1500848590
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1500848589}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 62.492268, y: 20.449717, z: -271.64954}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1639095789
 GameObject:
   m_ObjectHideFlags: 0
@@ -4845,6 +4963,21 @@ MonoBehaviour:
   brainPower: {fileID: 11400000, guid: e88b35f9b02284e77880b1bf704899bd, type: 2}
   treeLevel: {fileID: 11400000, guid: d34a4de450ca443798dcde01c2f6d725, type: 2}
   currentDay: {fileID: 11400000, guid: 0d898288fa8a44dc59e64dfd98dd1d1e, type: 2}
+  NewWeekEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: d1f12e0fa3e3a41719b7eea4a12505d1, type: 2}
+        m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &2132964486
 Transform:
   m_ObjectHideFlags: 0

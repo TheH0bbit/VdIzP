@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using TMPro;
 using UnityEngine.SceneManagement;
 
@@ -16,16 +17,19 @@ public class DayCounter : MonoBehaviour
 
     [SerializeField] IntVariable currentDay;
 
+    [SerializeField] UnityEvent NewWeekEvent;
+
     private void Start() 
     {
         textMeshProUGUI = textObject.GetComponent<TextMeshProUGUI>();
         Debug.Log(textMeshProUGUI.text);
         playedMinigame.SetValue(false);
+        currentDay.SetValue(0);
     }
 
     public void NextDay()
     {
-        if(currentDay.GetValue() == 6)
+        if(currentDay.GetValue() >= 6)
         {
             InstantiateNewWeek();
         } else
@@ -39,9 +43,9 @@ public class DayCounter : MonoBehaviour
     private void InstantiateNewWeek()
     {
         currentDay.SetValue(0);
-        treeLevel.SetValue(0);
         brainPower.SetValue(0);
         Debug.Log("Reached End of Week");
+        NewWeekEvent.Invoke();
     }
 
     private void DisplayDay()
@@ -73,6 +77,6 @@ public class DayCounter : MonoBehaviour
                 Debug.Log("Sth went wrong with the Day Counter");
                 break;
         }
-            Debug.Log("Current Day of the week: " + currentDay);
+            Debug.Log("Current Day of the week: " + textMeshProUGUI.text);
     }
 }

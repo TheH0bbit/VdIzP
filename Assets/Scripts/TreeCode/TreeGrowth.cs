@@ -7,32 +7,32 @@ public class TreeGrowth : MonoBehaviour
 {
     [SerializeField] IntVariable treeLevel;
     [SerializeField] GameObject [] trees;
-    private int lastLevel;
     
     void Start()
     {
-        treeLevel.SetValue(0);
-        lastLevel = treeLevel.GetValue() + 1;
+        StartNewWeek();
     }
 
-    void Update()
+    public void GrowTree()
     {
-        if(treeLevel.GetValue() != lastLevel && trees.Length == 8)
+        if(treeLevel.GetValue() >= trees.Length)
         {
-            Debug.Log("Tree Level changed from " + lastLevel + " to " + treeLevel.GetValue() + ".");
-            lastLevel = treeLevel.GetValue();
-            if(treeLevel.GetValue() >= 8)
-            {
-                treeLevel.SetValue(0);
-            }
-            if(treeLevel.GetValue() >= 0 && treeLevel.GetValue() < trees.Length)
-            {
-                for(int i = 0; i < trees.Length; i++)
-                {
-                    trees[i].SetActive(false);
-                }
-                trees[treeLevel.GetValue()].SetActive(true);
-            }
+            treeLevel.SetValue(0);
         }
+        if(treeLevel.GetValue() >= 0 && treeLevel.GetValue() < trees.Length)
+        {
+            for(int i = 0; i < trees.Length; i++)
+            {
+                trees[i].SetActive(false);
+            }
+            trees[treeLevel.GetValue()].SetActive(true);
+        }
+    }
+
+    public void StartNewWeek()
+    {
+        Debug.Log("New Week for new Tree uwu");
+        treeLevel.SetValue(0);
+        GrowTree();
     }
 }

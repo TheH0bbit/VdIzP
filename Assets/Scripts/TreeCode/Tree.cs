@@ -50,7 +50,7 @@ public class Tree : MonoBehaviour
     { 
         if (oldStats != newStats)
         {
-            Debug.Log("Changing Stats; New FlowerLevel: " + (int)(newStats - flowerThreshhold) + "; Current Flower Level: " + flowers + "; Current BrainPower: " + newStats);
+            //Debug.Log("Changing Stats; New FlowerLevel: " + (int)(newStats - flowerThreshhold) + "; Current Flower Level: " + flowers + "; Current BrainPower: " + newStats);
             if((int)(newStats - flowerThreshhold) > flowers)
             { 
                 SpawnFlower(statType, flowers);
