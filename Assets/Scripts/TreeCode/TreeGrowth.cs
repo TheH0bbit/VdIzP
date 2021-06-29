@@ -8,13 +8,11 @@ public class TreeGrowth : MonoBehaviour
     [SerializeField] IntVariable treeLevel;
     [SerializeField] GameObject [] trees;
     private int lastLevel;
-    private SpriteRenderer spriteRenderer;
-
+    
     void Start()
     {
         treeLevel.SetValue(0);
-        lastLevel = treeLevel.GetValue();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        lastLevel = treeLevel.GetValue() + 1;
     }
 
     void Update()

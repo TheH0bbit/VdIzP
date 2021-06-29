@@ -14,7 +14,7 @@ public class DayCounter : MonoBehaviour
     [SerializeField] FloatVariable brainPower;
     [SerializeField] IntVariable treeLevel;
 
-    private int currentDay = 0;
+    [SerializeField] IntVariable currentDay;
 
     private void Start() 
     {
@@ -25,17 +25,28 @@ public class DayCounter : MonoBehaviour
 
     public void NextDay()
     {
-        if(currentDay == 6)
+        if(currentDay.GetValue() == 6)
         {
-            currentDay = 0;
-            treeLevel.SetValue(0);
-            brainPower.SetValue(0);
-            Debug.Log("Reached End of Week");
+            InstantiateNewWeek();
         } else
         {
-            currentDay++;
+            currentDay.SetValue(currentDay.GetValue() + 1);
         }
-        switch(currentDay)
+            DisplayDay();
+            playedMinigame.SetValue(false);
+    }
+
+    private void InstantiateNewWeek()
+    {
+        currentDay.SetValue(0);
+        treeLevel.SetValue(0);
+        brainPower.SetValue(0);
+        Debug.Log("Reached End of Week");
+    }
+
+    private void DisplayDay()
+    {
+        switch(currentDay.GetValue())
         {
             case 1:
                 textMeshProUGUI.text = "DIENSTAG";
@@ -63,22 +74,5 @@ public class DayCounter : MonoBehaviour
                 break;
         }
             Debug.Log("Current Day of the week: " + currentDay);
-            playedMinigame.SetValue(false);
-    }
-
-    public void DoMinigame()
-    {
-        Debug.Log("Played a Minigame");
-        if(playedMinigame.GetValue() == false)
-        {
-            Debug.Log("Played first Minigame of the day");
-            playedMinigame.SetValue(true);
-            treeLevel.SetValue(treeLevel.GetValue() + 1);
-        }
-        else
-        {
-            brainPower.SetValue(brainPower.GetValue() + 1);
-        }
-        //SceneManager.LoadScene("Rechenspiel");
     }
 }
