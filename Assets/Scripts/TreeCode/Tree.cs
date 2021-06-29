@@ -38,14 +38,6 @@ public class Tree : MonoBehaviour
         }
     }
 
-   private void Update() {
-       CheckStats(oldRechenStats, RechenStats.GetValue(), rechenFlowers, Stat.Rechen);
-       CheckStats(oldBrainPower, BrainPower.GetValue(), brainFlowers, Stat.Brainpower);
-
-       oldRechenStats = RechenStats.GetValue();
-       oldBrainPower = BrainPower.GetValue();
-   }
-
     private void CheckStats(float oldStats, float newStats, int flowers, Stat statType) 
     { 
         if (oldStats != newStats)
@@ -53,31 +45,14 @@ public class Tree : MonoBehaviour
             //Debug.Log("Changing Stats; New FlowerLevel: " + (int)(newStats - flowerThreshhold) + "; Current Flower Level: " + flowers + "; Current BrainPower: " + newStats);
             if((int)(newStats - flowerThreshhold) > flowers)
             { 
-                SpawnFlower(statType, flowers);
+                //SpawnFlower(statType, flowers);
             }
         }
     }
-    private void SpawnFlower(Stat statType, int noFlowers)
+
+    public void OnSpawnFlower()
     {
-        switch (statType)
-        {
-            case Stat.Rechen:
-                for(int i = 0; i < noFlowers && i < FlowersBlue.Length; i++)
-                {
-                    FlowersBlue[i].GetComponent<SpriteRenderer>().enabled = true;
-                }
-                rechenFlowers = Mathf.Min(noFlowers, FlowersBlue.Length-1);
-                break;
-            case Stat.Brainpower:
-            for(int i = 0; i < noFlowers && i < FlowersBlue.Length; i++)
-                {
-                    FlowersRed[i].GetComponent<SpriteRenderer>().enabled = true;
-                }
-                brainFlowers = Mathf.Min(noFlowers, FlowersRed.Length-1);
-                break;
-            default:
-                break;
-        }
+        Debug.Log("Spawn Flower");
     }
 
     private void DespawnFlowers(Stat statType)
@@ -106,12 +81,23 @@ public class Tree : MonoBehaviour
     }
 
     private void OnEnable() {
-        
+        SpawnFlowers(FlowersBlue);
     }
 
 
     private void OnDisable() {
         DespawnFlowers(Stat.Rechen);
         DespawnFlowers(Stat.Brainpower);
+    }
+
+    private void SpawnFlowers(GameObject[] flowers)
+    {
+        for(int i = 0; i < flowers.Length && i < (int) BrainPower.GetValue(); i++)
+        {
+            if(FlowersBlue[i].GetComponent<SpriteRenderer>().enabled == false)
+            {
+                FlowersBlue[i].GetComponent<SpriteRenderer>().enabled = true;
+            }
+        }
     }
 }

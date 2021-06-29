@@ -9,6 +9,7 @@ public class PlayMinigame : MonoBehaviour
     [SerializeField] IntVariable treeLevel;
     [SerializeField] FloatVariable brainPower;
     [SerializeField] UnityEvent GrowTreeEvent;
+    [SerializeField] UnityEvent GrowFlowerEvent;
 
     private void Start() {
         brainPower.SetValue(0);
@@ -25,6 +26,10 @@ public class PlayMinigame : MonoBehaviour
             treeLevel.SetValue(treeLevel.GetValue() + 1);
             GrowTreeEvent.Invoke();
         }
-        brainPower.SetValue(brainPower.GetValue() + 1);
+        else
+        {
+            brainPower.SetValue(brainPower.GetValue() + 1);
+            GrowFlowerEvent.Invoke();
+        }
     }
 }
