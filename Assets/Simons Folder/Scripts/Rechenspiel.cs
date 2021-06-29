@@ -30,8 +30,10 @@ public class Rechenspiel : MonoBehaviour
             GameObject.FindGameObjectWithTag("Score").GetComponent<Text>().text = (right.ToString() + " / " + count.ToString());
             if (Input.GetKeyDown("space"))
             {
-                count++;
-                nextQuestion();
+                if (!this.gameObject.GetComponentInChildren<InputField>().text.Equals("")) {
+                    count++;
+                    nextQuestion();
+                }
             }
             if (count > 2)
             {
