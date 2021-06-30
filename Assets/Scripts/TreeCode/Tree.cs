@@ -20,6 +20,7 @@ public class Tree : MonoBehaviour
 
 
     private void Start() {
+        /*
         if(true)
         {
             for(int i = 0; i < FlowersBlue.Length; i++)
@@ -36,6 +37,7 @@ public class Tree : MonoBehaviour
             oldBrainPower = 0f;
             firstTimeLoaded.SetValue(false);
         }
+        */
     }
 
     private void CheckStats(float oldStats, float newStats, int flowers, Stat statType) 

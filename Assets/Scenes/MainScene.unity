@@ -648,7 +648,6 @@ MonoBehaviour:
   textObject: {fileID: 1266882133}
   playedMinigame: {fileID: 11400000, guid: 27da91ef8a77147b2be3782fe4053bba, type: 2}
   brainPower: {fileID: 11400000, guid: e88b35f9b02284e77880b1bf704899bd, type: 2}
-  treeLevel: {fileID: 11400000, guid: d34a4de450ca443798dcde01c2f6d725, type: 2}
   currentDay: {fileID: 11400000, guid: 0d898288fa8a44dc59e64dfd98dd1d1e, type: 2}
   NewWeekEvent:
     m_PersistentCalls:
@@ -2187,6 +2186,7 @@ MonoBehaviour:
   - {fileID: 1248047395}
   - {fileID: 908143593}
   - {fileID: 908143593}
+  playedMinigame: {fileID: 11400000, guid: 27da91ef8a77147b2be3782fe4053bba, type: 2}
 --- !u!114 &889427138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4976,7 +4976,6 @@ MonoBehaviour:
   textObject: {fileID: 1266882133}
   playedMinigame: {fileID: 11400000, guid: 27da91ef8a77147b2be3782fe4053bba, type: 2}
   brainPower: {fileID: 11400000, guid: e88b35f9b02284e77880b1bf704899bd, type: 2}
-  treeLevel: {fileID: 11400000, guid: d34a4de450ca443798dcde01c2f6d725, type: 2}
   currentDay: {fileID: 11400000, guid: 0d898288fa8a44dc59e64dfd98dd1d1e, type: 2}
   NewWeekEvent:
     m_PersistentCalls:

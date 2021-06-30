@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class PlayMinigame : MonoBehaviour
 {
@@ -12,16 +13,14 @@ public class PlayMinigame : MonoBehaviour
     [SerializeField] UnityEvent GrowFlowerEvent;
 
     private void Start() {
-        brainPower.SetValue(0);
+
     }
 
 
     public void DoMinigame()
     {
-        //Debug.Log("Played a Minigame");
         if(playedMinigame.GetValue() == false)
         {
-           // Debug.Log("Played first Minigame of the day");
             playedMinigame.SetValue(true);
             treeLevel.SetValue(treeLevel.GetValue() + 1);
             GrowTreeEvent.Invoke();
@@ -31,5 +30,8 @@ public class PlayMinigame : MonoBehaviour
             brainPower.SetValue(brainPower.GetValue() + 1);
             GrowFlowerEvent.Invoke();
         }
+
+        Debug.Log("Minigame time");
+        SceneManager.LoadScene("Rechenspiel");
     }
 }

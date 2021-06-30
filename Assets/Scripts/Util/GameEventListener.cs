@@ -17,6 +17,7 @@ public class GameEventListener : MonoBehaviour
     }
     public void OnEventRaised()
     {
+        Debug.Log("Raised Event " + Event.name);
         Response.Invoke();
     }
 }

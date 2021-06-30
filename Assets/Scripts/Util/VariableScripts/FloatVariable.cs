@@ -6,6 +6,7 @@ using UnityEngine;
 public class FloatVariable : ScriptableObject
 {
     [SerializeField] float value;
+    [SerializeField] float defaultValue = 0f;
 
     public void SetValue(float f)
     {
@@ -15,5 +16,10 @@ public class FloatVariable : ScriptableObject
     public float GetValue()
     {
         return this.value;
+    }
+
+    private void OnEnable() {
+        this.hideFlags = HideFlags.DontUnloadUnusedAsset;
+        value = defaultValue;
     }
 }

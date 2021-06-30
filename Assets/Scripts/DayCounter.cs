@@ -13,7 +13,6 @@ public class DayCounter : MonoBehaviour
 
     [SerializeField] BooleanVariable playedMinigame;
     [SerializeField] FloatVariable brainPower;
-    [SerializeField] IntVariable treeLevel;
 
     [SerializeField] IntVariable currentDay;
 
@@ -22,13 +21,12 @@ public class DayCounter : MonoBehaviour
     private void Start() 
     {
         textMeshProUGUI = textObject.GetComponent<TextMeshProUGUI>();
-        Debug.Log(textMeshProUGUI.text);
-        playedMinigame.SetValue(false);
-        currentDay.SetValue(0);
+        DisplayDay();
     }
 
     public void NextDay()
     {
+        Debug.Log("Initiating next Day");
         if(currentDay.GetValue() >= 6)
         {
             InstantiateNewWeek();
@@ -77,6 +75,6 @@ public class DayCounter : MonoBehaviour
                 Debug.Log("Sth went wrong with the Day Counter");
                 break;
         }
-            Debug.Log("Current Day of the week: " + textMeshProUGUI.text);
+            Debug.Log("Current Day: " + textMeshProUGUI.text);
     }
 }

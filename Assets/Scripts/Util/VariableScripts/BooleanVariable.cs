@@ -6,6 +6,7 @@ using UnityEngine;
 public class BooleanVariable : ScriptableObject
 {
     [SerializeField] bool value;
+    [SerializeField] bool defaultValue = false;
 
     public void SetValue(bool b)
     {
@@ -15,5 +16,11 @@ public class BooleanVariable : ScriptableObject
     public bool GetValue()
     {
         return this.value;
+    }
+
+
+    private void OnEnable() {
+        this.hideFlags = HideFlags.DontUnloadUnusedAsset;
+        value = defaultValue;
     }
 }

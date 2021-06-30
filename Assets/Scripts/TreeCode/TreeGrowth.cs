@@ -7,20 +7,26 @@ public class TreeGrowth : MonoBehaviour
 {
     [SerializeField] IntVariable treeLevel;
     [SerializeField] GameObject [] trees;
+    [SerializeField] BooleanVariable playedMinigame;
     
     void Start()
     {
-        StartNewWeek();
+        GrowTree();
+
+        //StartNewWeek();
     }
 
     public void GrowTree()
     {
+        
         if(treeLevel.GetValue() >= trees.Length)
         {
+            Debug.Log("Growing Tri smol");
             treeLevel.SetValue(0);
         }
         if(treeLevel.GetValue() >= 0 && treeLevel.GetValue() < trees.Length)
         {
+            Debug.Log("Activating tree stage " + treeLevel.GetValue());
             for(int i = 0; i < trees.Length; i++)
             {
                 trees[i].SetActive(false);
