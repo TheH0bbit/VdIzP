@@ -20,7 +20,6 @@ public class Tree : MonoBehaviour
 
     public void OnSpawnFlower()
     {
-        Debug.Log("Spawn Flower");
         SpawnFlowers();
     }
 

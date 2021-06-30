@@ -8,14 +8,10 @@ public class PlayMinigame : MonoBehaviour
 {
     [SerializeField] BooleanVariable playedMinigame;
     [SerializeField] IntVariable treeLevel;
-    [SerializeField] FloatVariable brainPower;
+    [SerializeField] FloatVariable minigameType;
     [SerializeField] UnityEvent GrowTreeEvent;
     [SerializeField] UnityEvent GrowFlowerEvent;
-
-    private void Start() {
-
-    }
-
+    [SerializeField] string minigameScene = "";
 
     public void DoMinigame()
     {
@@ -27,11 +23,11 @@ public class PlayMinigame : MonoBehaviour
         }
         else
         {
-            brainPower.SetValue(brainPower.GetValue() + 1);
+            minigameType.SetValue(minigameType.GetValue() + 1);
             GrowFlowerEvent.Invoke();
         }
 
         Debug.Log("Minigame time");
-        SceneManager.LoadScene("Rechenspiel");
+        SceneManager.LoadScene(minigameScene);
     }
 }
