@@ -96,14 +96,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92c68c797e8ab4a49a3ddc8fd849dcde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TreeStage: 0
   spriteArray:
   - {fileID: 7482667652216324306, guid: 0a2d0a1e5dfe6da498d416e475dc7054, type: 3}
   - {fileID: -2413806693520163455, guid: 6072bec12aba1994c946020d9ee128d3, type: 3}
   - {fileID: 3625043607559282579, guid: a2bc950a93c3c6b468da5a94c87519ca, type: 3}
-  spriteRenderer: {fileID: 0}
+  TreeID: 0
+  CurrTree: {fileID: 11400000, guid: 94846e40ed7f9844ca6d48693ea0ab41, type: 2}
   Stat1: {fileID: 11400000, guid: e669fbde9508d6a4c9ddd4447442f914, type: 2}
   Stat2: {fileID: 11400000, guid: 623779466cd62784580aebdd3e2e5f1d, type: 2}
+  BrainPowerStat: {fileID: 11400000, guid: e88b35f9b02284e77880b1bf704899bd, type: 2}
+  RechenPowerStat: {fileID: 11400000, guid: 37367e2fc5e4745afa9199fadd9a9a46, type: 2}
   Stat1Stored: 0
   Stat2Stored: 0
   CG: {fileID: 0}
