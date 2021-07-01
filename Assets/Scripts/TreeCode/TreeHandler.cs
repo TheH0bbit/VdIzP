@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class TreeHandler : MonoBehaviour
 {
-    public int TreeStage; //for example 0 = no tree, 1 = Tree planted, 2 = Tree Grown
     public Sprite[] spriteArray;
-    public SpriteRenderer spriteRenderer;
-
+    private SpriteRenderer spriteRenderer;
+    public int TreeID;
+    [SerializeField] IntVariable CurrTree;
     [SerializeField] FloatVariable Stat1;
     [SerializeField] FloatVariable Stat2;
 
     public float Stat1Stored;
     public float Stat2Stored;
+    private bool initiated;
 
     [SerializeField] private CanvasGroup CG;
 
@@ -22,12 +23,26 @@ public class TreeHandler : MonoBehaviour
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         CG = GameObject.Find("StatsCanvas").GetComponent<CanvasGroup>();
         CG.alpha = 0;
+        initiated = false;
+        spriteRenderer.enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+    }
+
+    public void SetTreeStats(float bp, float rp)
+    {
+        if(TreeID == CurrTree.GetValue())
+        Stat1Stored = bp;
+        Stat2Stored = rp;
+        if (!initiated)
+        {
+            spriteRenderer.enabled = true;
+            initiated = true;
+        }
+
     }
 
     private void OnMouseEnter()

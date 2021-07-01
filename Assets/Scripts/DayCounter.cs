@@ -12,10 +12,14 @@ public class DayCounter : MonoBehaviour
     private TextMeshProUGUI textMeshProUGUI;
 
     [SerializeField] BooleanVariable playedMinigame;
+
     [SerializeField] FloatVariable brainPower;
     [SerializeField] FloatVariable rechenPower;
 
     [SerializeField] IntVariable currentDay;
+    [SerializeField] IntVariable gardenTreeID;
+
+    [SerializeField] TreeController treeController;
 
     [SerializeField] UnityEvent NewWeekEvent;
 
@@ -42,6 +46,8 @@ public class DayCounter : MonoBehaviour
 
     private void InstantiateNewWeek()
     {
+        treeController.SetTreeValues(brainPower.GetValue(), rechenPower.GetValue(), gardenTreeID.GetValue()%6);
+        gardenTreeID.SetValue((gardenTreeID.GetValue()+1)%6);
         currentDay.SetValue(0);
         brainPower.SetValue(0);
         rechenPower.SetValue(0);

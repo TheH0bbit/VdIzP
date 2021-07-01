@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ba2dc8efde3d45dabf8d3c4e592ecd7, type: 3}
-  m_Name: BrainPowerStat
+  m_Script: {fileID: 11500000, guid: aa87fd1560a9843e48601cc6148dac66, type: 3}
+  m_Name: CurrTreeID
   m_EditorClassIdentifier: 
   value: 0
   defaultValue: 0
