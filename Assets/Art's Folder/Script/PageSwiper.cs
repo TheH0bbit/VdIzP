@@ -10,22 +10,39 @@ public class PageSwiper : MonoBehaviour, IDragHandler, IEndDragHandler
     public float easing = 0.5f;
     public int totalPages = 1;
     private int currentPage = 2;
-
+    public GameObject ThingsToDisappear;
     public AudioSource audi;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         panelLocation = transform.position;
     }
+    void Update()
+    {
+        if (currentPage != 2)
+        {
+            ThingsToDisappear.SetActive(false);
+        }
+        else
+        {
+            ThingsToDisappear.SetActive(true);
+        }
+    }
     public void OnDrag(PointerEventData data)
     {
+       
+        
         float difference = (data.pressPosition.x - data.position.x) / 20;
         transform.position = panelLocation - new Vector3(difference, 0, 0);
         audi.Play();
+       
     }
+
     public void OnEndDrag(PointerEventData data)
     {
+       
         float percentage = (data.pressPosition.x - data.position.x) / 70;
         if (Mathf.Abs(percentage) >= percentThreshold)
         {
@@ -59,3 +76,4 @@ public class PageSwiper : MonoBehaviour, IDragHandler, IEndDragHandler
         }
     }
 }
+
