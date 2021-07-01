@@ -11,9 +11,16 @@ public class TreeController : MonoBehaviour
         
     }
 
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+    static void OnBeforeSceneLoadRuntimeMethod()
+    {
+        PlayerPrefs.DeleteAll();
+    }
+
     public void SetTreeValues(float bp, float rp, int treeID)
     {
         trees[treeID].GetComponent<TreeHandler>().SetTreeStats(bp, rp);
+        trees[treeID].GetComponent<TreeHandler>().CreateFlowers();
     }
 
     // Update is called once per frame
@@ -22,3 +29,4 @@ public class TreeController : MonoBehaviour
         
     }
 }
+
