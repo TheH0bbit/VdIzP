@@ -740,7 +740,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  minigameScene: Rechenspiel
+  minigameScene: Bilderspiel
 --- !u!114 &230246118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1478,7 +1478,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: PLAY Brainspiel
+  m_Text: PLAY Bilderspiel
 --- !u!222 &389607140
 CanvasRenderer:
   m_ObjectHideFlags: 0
